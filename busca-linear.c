@@ -5,9 +5,20 @@ int busca_linear(int v[], int n, int alvo) {
             return i; 
         }
     }
-    return -1;
+    return -1; 
 }
 
 int main() {
-    int v[] = 
+    int v[] = {73, 28, 15, 89, 35, 13};
+    int n = sizeof(v)/sizeof(v[0]);
+    int alvo;
+    printf("Digite o valor a buscar (linear): ");
+    scanf("%d", &alvo);
+    int idx = busca_linear(v, n, alvo);
+    if (idx == -1) {
+        printf("Valor %d nao encontrado.\n", alvo);
+    } else {
+        printf("Valor %d encontrado no indice %d.\n", alvo, idx);
+    }
+    return 0;
 }
